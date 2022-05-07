@@ -13,14 +13,14 @@ resource "aws_instance" "hello-world" {
     cidr_blocks = ["0.0.0.0/0"]
     description = "Internet access from outside"
     from_port   = 0
-    protocol    = tcp
+    protocol    = "tcp"
     to_port     = 80
   }
   ingress {
     cidr_blocks = ["0.0.0.0/0"]
     description = "SSH access from outside"
     from_port   = 22
-    protocol    = tcp
+    protocol    = "tcp"
     to_port     = 22
   }
   egress {
